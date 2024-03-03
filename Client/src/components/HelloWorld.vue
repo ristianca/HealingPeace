@@ -1,17 +1,27 @@
 <script setup>
+import axios from '@/services/Api';
+
 defineProps({
   msg: {
     type: String,
     required: true
   }
 })
+
+let resData = axios.get('/api/register')
+  .then(response => {
+    console.log(response.data);
+  })
+  .catch(error => {
+    console.log(error);
+  });
 </script>
 
 <template>
   <div class="greetings">
     <h1 class="green">{{ msg }}</h1>
     <h3>
-      You’ve successfully created a project with
+      You’ve successfully created a project with {resData}
       <a href="https://vitejs.dev/" target="_blank" rel="noopener">Vite</a> +
       <a href="https://vuejs.org/" target="_blank" rel="noopener">Vue 3</a>.
     </h3>
