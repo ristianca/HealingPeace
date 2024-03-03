@@ -1,5 +1,4 @@
 <script setup>
-import axios from '@/services/Api';
 
 defineProps({
   msg: {
@@ -8,13 +7,7 @@ defineProps({
   }
 })
 
-let resData = axios.get('/api/register')
-  .then(response => {
-    console.log(response.data);
-  })
-  .catch(error => {
-    console.log(error);
-  });
+
 </script>
 
 <template>

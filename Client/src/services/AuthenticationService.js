@@ -1,8 +1,8 @@
-import API from '@/services/Api'
+import Api from '@/services/Api'
 
 export default {
     register (credentials) {
-        return API().post('register', credentials)
+        return Api().post('register', credentials)
     }
 }
 
