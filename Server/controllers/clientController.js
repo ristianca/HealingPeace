@@ -14,8 +14,6 @@ export function createClient(req, res) {
     }
 }
 
-
-
 export function getClients(req, res) {
     const clientEmail = req.params.email;
     try {

@@ -10,17 +10,10 @@ app.use(morgan('combined'));
 app.use(bodyParser.json());
 app.use(cors());
 
-app.get('/test', (req, res) => {
-    res.send({
-        message: 'hello world!'
-    });
-});
+const { connectDB } = require('../models/dbModel');
 
-app.post('/register', (req, res) => {
-    res.send({
-        message: `${req.body.email}! Hope this works!`
-    });
-});
+connectDB();
+
 
 app.listen(process.env.PORT || 8081);
 
