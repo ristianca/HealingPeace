@@ -21,7 +21,7 @@ export function createDBTables(){
 }
 
 //function to save a new user to the database
-export function saveLogin(email, password) {
+export function registerLogin(email, password) {
     const user = {
         email: email,
         password: password
