@@ -17,7 +17,7 @@ export function createClient(req, res) {
 export function getClients(req, res) {
     const clientEmail = req.params.email;
     try {
-        const clients = Client.getClients(clientEmail);
+        const clients = Client.getClient(clientEmail);
         res.status(200).json(clients);
         return clients;
     }
