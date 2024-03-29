@@ -3,22 +3,23 @@
   <script>
   import AuthenticationService from '@/services/AuthenticationService'; 
     export default {
-      name: 'RegisterView',
-      components: {
-      },
       data() {
         return {
-            email: '',
-            password: ''
-        }
-      }, 
+          email: '',
+          password: ''
+        };
+      },
       methods: {
-        async register(){
-          const response = await AuthenticationService.register({
-            email: this.email,
-            password: this.password
-          })
-          console.log(response.data)
+        async register() {
+          try {
+            const response = await AuthenticationService.register({
+              email: this.email,
+              password: this.password
+            });
+            console.log(response);
+          } catch (error) {
+            console.log(error);
+          }
         }
       },
     };
@@ -29,7 +30,7 @@
   <div class="greetings">
     <h1 class="green">Register</h1>
     
-    <form @submit.prevent="register">
+    <form @submit="register">
     <input
       type="email"
       name="email"

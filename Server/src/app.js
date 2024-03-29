@@ -10,9 +10,20 @@ app.use(morgan('combined'));
 app.use(bodyParser.json());
 app.use(cors());
 
-const { connectDB } = require('../models/dbModel');
+const DB = require('../models/dbModel');
 
-connectDB();
+DB.connectDB();
 
+//const data =  DB.queryDB('SELECT * FROM LOGIN')
+// console.log(data);
+
+const LoginController = require('../controllers/loginController');
+app.post('/register', 
+    LoginController.createLogin
+);
+
+
+
+// Add your code here
 
 app.listen(process.env.PORT || 8081);

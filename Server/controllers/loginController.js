@@ -1,9 +1,11 @@
-/*loginController handles login and authintication of users*/
-
 const loginModel = require("../models/loginModel");
 
-export function login(req, res) {
-    const { email, password } = req.body;
+
+/*loginController handles login and authintication of users*/
+
+function login(req, res) {
+    const email = req.body.email; 
+    const password = req.body.password;
     try {
         const user = loginModel.getLogin(email);
         if (user.password === password) {
@@ -19,8 +21,9 @@ export function login(req, res) {
     }
 }
 
-export function register(req, res) {
-    const { email, password } = req.body;
+function createLogin(req, res) {
+    const email = req.body.email;
+    const password = req.body.password;
     try {
         loginModel.registerLogin(email, password);
         res.status(200).json({ message: 'User registered successfully' });
@@ -31,3 +34,4 @@ export function register(req, res) {
     }
 }
 
+module.exports = { login, createLogin };

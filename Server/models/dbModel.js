@@ -13,16 +13,16 @@ const connection = new mysql.createConnection({
     database: process.env.DB_NAME,
     port: process.env.DB_PORT,
     insecureAuth: process.env.DB_AUTH
-});
+})
 
 const connectDB = async () => {
     connection.connect((err) => {
         if (err) {
+            console.log(connection)
             console.error('Error connecting to database:', err);
             return;
         }
         console.log('Connected to database');
-        return connection;
     });
 }
 
@@ -35,9 +35,18 @@ const disconnectDB = async () => {
         console.log('Disconnected from database');
     }
     );
+};
+
+const queryDB = (query, values) =>{
+    return new Promise((resolve, reject) => {
+        connection.query(query, values, (err, results) => {
+            if (err) {
+                reject(err);
+            }
+            resolve(results);
+        });
+    });
 }
+   
 
-module.exports = connection;
-module.exports = { connectDB, disconnectDB };
-
-
+module.exports = { connection, connectDB, disconnectDB, queryDB };

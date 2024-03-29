@@ -14,7 +14,7 @@ CREATE TABLE IF NOT EXISTS clients (
     dob DATE NOT NULL,`
 
 //function to create the client table
-export function createDBTables(){
+const createDBTables = () => {
     connection.query(clientSchema, (err) => {
         if (err) {
             console.error('Error creating clients table:', err);
@@ -25,7 +25,7 @@ export function createDBTables(){
 }
 
 //function to save a new client to the database
-export function saveClient(first_name, last_name, address, phone_number, email, gender, dob) {
+const saveClient = (first_name, last_name, address, phone_number, email, gender, dob) => {
     const client = {
         first_name: first_name,
         last_name: last_name,
@@ -44,7 +44,7 @@ export function saveClient(first_name, last_name, address, phone_number, email, 
     });
 }
 
-export function getClient(email){
+const getClient = (email) =>{
     connection.query('SELECT * FROM clients WHERE email = ?', email, (err, results) => {
         if (err) {
             console.error('Error fetching client:', err);
@@ -55,3 +55,4 @@ export function getClient(email){
 
 }
 
+module.exports = { createDBTables, saveClient, getClient };

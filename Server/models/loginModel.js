@@ -4,39 +4,38 @@ Still need to encrypt password before sending it to the db*/
 const connection = require("./dbModel");
 
 const loginSchema = `
-    CREATE TABLE IF NOT EXISTS login (
+    CREATE TABLE IF NOT EXISTS LOGIN (
         id INT AUTO_INCREMENT PRIMARY KEY,
         email VARCHAR(255) NOT NULL UNIQUE,
-        password VARCHAR(255) NOT NULL)`; 
+        password VARCHAR(255) NOT NULL)
+        createdAt TIMESTAMP DEFAULT CURRENT_TIMESTAMP,`; 
 
 //function to create the login table
-export function createDBTables(){
+const createDBTables = () =>{
     connection.query(loginSchema, (err) => {
         if (err) {
-            console.error('Error creating login table:', err);
+            console.error('Error creating LOGIN table:', err);
             return;
         }
         console.log('Login table created');
     });
-}
+};
 
 //function to save a new user to the database
-export function registerLogin(email, password) {
-    const user = {
-        email: email,
-        password: password
-    };
-    connection.query('INSERT INTO login SET ?', user, (err, results) => {
-        if (err) {
-            console.error('Error creating user:', err);
-            return;
-        }
+const registerLogin = async (email, password) => {
+    const user = {email, password};
+    try {
+        const results = await connection.queryDB('INSERT INTO `LOGIN` (`email`, `password`) VALUES("' + user.email + '" , "' + user.password + '")');
         return results;
-    });
+        }
+        catch (error) {
+            console.error(error);
+            return error;
+    }
+    
 }
-
-export function getLogin(email){
-    connection.query('SELECT * FROM login WHERE email = ?', email, (err, results) => {
+const getLogin = (email) => {
+    connection.query('SELECT * FROM LOGIN WHERE email = ?', email, (err, results) => {
         if (err) {
             console.error('Error fetching user:', err);
             return;
@@ -45,3 +44,5 @@ export function getLogin(email){
     });
 
 }
+
+module.exports = { createDBTables, registerLogin, getLogin };
