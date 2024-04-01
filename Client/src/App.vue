@@ -1,12 +1,14 @@
-<script setup>
-<<<<<<< HEAD
-import { RouterView } from 'vue-router'
+<script>
+  import {  RouterView } from 'vue-router'
+  import NavBar from './components/NavBar.vue'
 
-=======
-import { RouterLink, RouterView } from 'vue-router'
-import NavBar from './components/NavBar.vue'
-import HelloWorld from './components/HelloWorld.vue'
->>>>>>> c7305f4977bd9279815b66150d5ecaf747627fc8
+  export default {
+    name: 'App',
+    components: {
+      NavBar,
+      RouterView
+    }
+  }
 </script>
 
 <template>
@@ -17,14 +19,9 @@ import HelloWorld from './components/HelloWorld.vue'
 </template>
 
 <style scoped>
-header {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-}
 
-/* header {
+
+header {
   line-height: 1.5;
   max-height: 100vh;
 }
@@ -84,5 +81,5 @@ nav a:first-of-type {
     padding: 1rem 0;
     margin-top: 1rem;
   }
-} */
+} 
 </style>

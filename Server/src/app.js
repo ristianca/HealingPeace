@@ -14,16 +14,9 @@ const DB = require('../models/dbModel');
 
 DB.connectDB();
 
-//const data =  DB.queryDB('SELECT * FROM LOGIN')
-// console.log(data);
-
 const LoginController = require('../controllers/loginController');
 app.post('/register', 
     LoginController.createLogin
 );
-
-
-
-// Add your code here
 
 app.listen(process.env.PORT || 8081);
