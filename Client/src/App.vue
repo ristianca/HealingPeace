@@ -1,17 +1,25 @@
 <script>
   import {  RouterView } from 'vue-router'
   import NavBar from './components/NavBar.vue'
+  import Parallax from './components/Parallax.vue'
+  import { ref } from 'vue'
 
   export default {
     name: 'App',
     components: {
+      Parallax,
       NavBar,
       RouterView
+    },
+    props: {
+      titleHeight: ref('100vh')
     }
+
   }
 </script>
 
 <template>
+  <Parallax :height="titleHeight" />
   <header>
     <NavBar />
   </header>
@@ -22,8 +30,10 @@
 
 
 header {
-  line-height: 1.5;
-  max-height: 100vh;
+  position: absolute;
+  top: 0;
+  width: 100%;
+  background-color: rgba(55, 75, 75, 0.5);
 }
 
 .logo {
@@ -35,7 +45,6 @@ nav {
   width: 100%;
   font-size: 12px;
   text-align: center;
-  margin-top: 2rem;
 }
 
 nav a.router-link-exact-active {
@@ -57,12 +66,6 @@ nav a:first-of-type {
 }
 
 @media (min-width: 1024px) {
-  header {
-    display: flex;
-    place-items: center;
-    padding-right: calc(var(--section-gap) / 2);
-  }
-
   .logo {
     margin: 0 2rem 0 0;
   }
@@ -79,7 +82,6 @@ nav a:first-of-type {
     font-size: 1rem;
 
     padding: 1rem 0;
-    margin-top: 1rem;
   }
 } 
 </style>
