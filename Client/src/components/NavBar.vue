@@ -1,11 +1,12 @@
 <script setup></script>
 
 <template>
-  <nav class="navbar navbar-expand-lg bg-transparent">
+  <nav class="navbar navbar-dark navbar-expand-lg bg-transparent">
     <div class="container-fluid">
       <a class="navbar-brand" href="#">
+        <!-- we can put in a logo prop here to make it more component-like -->
         <img
-          src="/src/assets/feather-svgrepo-com.svg"
+          src="/src/assets/feather-svgrepo-com.svg" 
           alt="Logo"
           width="30"
           height="24"
@@ -30,7 +31,7 @@
             <a class="nav-link active" aria-current="page" href="#">Home</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#">Link</a>
+            <a class="nav-link" href="#">Store</a>
           </li>
           <li class="nav-item dropdown">
             <a
@@ -40,7 +41,7 @@
               data-bs-toggle="dropdown"
               aria-expanded="false"
             >
-              Dropdown
+              Services
             </a>
             <ul class="dropdown-menu">
               <li><a class="dropdown-item" href="#">Action</a></li>
@@ -49,8 +50,16 @@
               <li><a class="dropdown-item" href="#">Something else here</a></li>
             </ul>
           </li>
-          <li class="nav-item">
-            <a class="nav-link disabled" aria-disabled="true">Disabled</a>
+        </ul>
+        <ul class="float-end navbar-nav me-5 fs-5">
+          <li class="nav-item float-end">
+            <a class="nav-link" href="https://www.facebook.com/profile.php?id=100084295332797"><i class="fa-brands fa-facebook"></i></a>
+          </li>
+          <li class="nav-item float-end">
+            <a class="nav-link" href="#"><i class="fa-brands fa-instagram"></i></a>
+          </li>
+          <li class="nav-item float-end" style="font-size: 1rem; align-self: center;">
+            <a class="nav-link" href="#">Contact Us</a>
           </li>
         </ul>
       </div>
@@ -61,5 +70,12 @@
 <style scoped>
 nav {
   z-index: 1;
+}
+
+.navbar-brand {
+  font-family: 'Tangerine', cursive;
+  font-weight: 700;
+  font-size: 2rem;
+  padding-left: 2rem;
 }
 </style>
