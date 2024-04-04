@@ -10,6 +10,7 @@ app.use(bodyParser.json());
 app.use(cors());
 
 require('dotenv').config();
+
 // auth router attaches /login, /logout, and /callback routes to the baseURL
 app.use(auth(process.env.AUTH_CONFIG));
 
@@ -22,8 +23,9 @@ var clientRouter = require("../routes/client");
 
 app.use("/client", clientRouter);
 
-// app.use("/login", loginRouter);
+//app.use("/login", loginRouter);
 
+//Auth0 
 app.get('/login', (req, res) => {
     res.send(req.oidc.isAuthenticated() ? 'Logged in' : 'Logged out');
 });
