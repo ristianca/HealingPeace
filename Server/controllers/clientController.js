@@ -1,8 +1,9 @@
 //Controller for all client related operations
-
 const Client = require('../models/clientModel');
+const asyncHandler = require("express-async-handler");
 
-export function createClient(req, res) {
+// Display book delete form on GET.
+exports.createClient = asyncHandler(async (req, res) => {
     const { first_name, last_name, address, phone_number, gender, dob} = req.body;
     try {
         Client.saveClient(first_name, last_name, address, phone_number, gender, dob);
@@ -12,9 +13,10 @@ export function createClient(req, res) {
         console.error(error);
         res.status(500).json({ message: 'Internal server error' });
     }
-}
+  });
 
-export function getClients(req, res) {
+
+exports.getClients = asyncHandler(async (req, res) => {
     const clientEmail = req.params.email;
     try {
         const clients = Client.getClient(clientEmail);
@@ -26,5 +28,5 @@ export function getClients(req, res) {
         res.status(500).json({ message: 'Internal server error' });
     }
     
-}
+});
 

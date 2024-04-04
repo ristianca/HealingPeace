@@ -35,7 +35,7 @@ const saveClient = (first_name, last_name, address, phone_number, email, gender,
         gender: gender,
         dob: dob
     };
-    connection.query('INSERT INTO clients SET ?', client, (err, results) => {
+    connection.queryDB('INSERT INTO clients SET ?', client, (err, results) => {
         if (err) {
             console.error('Error creating client:', err);
             return;
@@ -45,7 +45,7 @@ const saveClient = (first_name, last_name, address, phone_number, email, gender,
 }
 
 const getClient = (email) =>{
-    connection.query('SELECT * FROM clients WHERE email = ?', email, (err, results) => {
+    connection.queryDB('SELECT * FROM clients WHERE email = ?', email, (err, results) => {
         if (err) {
             console.error('Error fetching client:', err);
             return;

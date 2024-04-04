@@ -1,9 +1,9 @@
 const loginModel = require("../models/loginModel");
-
+const asyncHandler = require("express-async-handler");
 
 /*loginController handles login and authintication of users*/
 
-function login(req, res) {
+exports.login = asyncHandler(async (req, res) => {
     const email = req.body.email; 
     const password = req.body.password;
     try {
@@ -19,9 +19,9 @@ function login(req, res) {
         console.error(error);
         res.status(500).json({ message: 'Internal server error' });
     }
-}
+});
 
-function createLogin(req, res) {
+exports.createLogin = asyncHandler(async (req, res) => {
     const email = req.body.email;
     const password = req.body.password;
     try {
@@ -32,6 +32,5 @@ function createLogin(req, res) {
         console.error(error);
         res.status(500).json({ message: 'Internal server error' });
     }
-}
+});
 
-module.exports = { login, createLogin };
