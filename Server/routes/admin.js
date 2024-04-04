@@ -1,14 +1,13 @@
 const express = require("express");
 const router = express.Router();
 
-// Require controller modules.
+const admin_controller = require("../controllers/adminController");
 const client_controller = require("../controllers/clientController");
 
+router.get("/getClient", admin_controller.getClient);
 
-router.post("/create", client_controller.createClient);
-
-router.get("/getclient", client_controller.getClients);
+router.post("/createClient", client_controller.createClient);
 
 router.get("/removeClient", client_controller.removeClient);
 
-module.exports = router;
+

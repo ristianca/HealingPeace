@@ -48,11 +48,21 @@ const getClient = (email) =>{
     connection.queryDB('SELECT * FROM clients WHERE email = ?', email, (err, results) => {
         if (err) {
             console.error('Error fetching client:', err);
-            return;
+            return err;
         }
         return results[0];
     });
 
 }
 
-module.exports = { createDBTables, saveClient, getClient };
+const removeClient = (email) =>{
+    connection.queryDB('REMOVE CLIENT FROM CLIENTS WHERE email = ?', email, (err, results) => {
+        if (err) {
+            console.error("Error removing CLIENT", err);
+            return err;
+        }
+        return results;
+    })
+}
+
+module.exports = { createDBTables, saveClient, getClient, removeClient };

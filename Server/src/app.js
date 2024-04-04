@@ -19,11 +19,12 @@ DB.connectDB();
 
 var clientRouter = require("../routes/client");
 // var loginRouter = require("../routes/login");
-
+var adminRouter = require("../routes/admin");
 
 app.use("/client", clientRouter);
-
 //app.use("/login", loginRouter);
+app.use("/admin", adminRouter);
+
 
 //Auth0 
 app.get('/login', (req, res) => {
