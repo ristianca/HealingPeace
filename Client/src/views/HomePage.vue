@@ -1,6 +1,5 @@
 <script setup>
 import Parallax from '@/components/Parallax.vue';
-import HelloWorld from '../components/HelloWorld.vue'
 import HeroSection from '../components/HeroSection.vue'
 import { ref } from 'vue'
 
