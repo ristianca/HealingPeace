@@ -1,4 +1,6 @@
-<script setup></script>
+<script>
+
+</script>
 
 <template>
   <nav class="navbar navbar-dark navbar-expand-lg bg-transparent">
@@ -26,31 +28,11 @@
         <span class="navbar-toggler-icon"></span>
       </button>
       <div class="collapse navbar-collapse" id="navbarSupportedContent">
-        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-          <li class="nav-item">
-            <a class="nav-link active" aria-current="page" href="#">Home</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#">Store</a>
-          </li>
-          <li class="nav-item dropdown">
-            <a
-              class="nav-link dropdown-toggle"
-              href="#"
-              role="button"
-              data-bs-toggle="dropdown"
-              aria-expanded="false"
-            >
-              Services
-            </a>
-            <ul class="dropdown-menu">
-              <li><a class="dropdown-item" href="#">Action</a></li>
-              <li><a class="dropdown-item" href="#">Another action</a></li>
-              <li><hr class="dropdown-divider" /></li>
-              <li><a class="dropdown-item" href="#">Something else here</a></li>
-            </ul>
-          </li>
-        </ul>
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0">     
+            <router-link to="/" class="nav-item nav-link">Home</router-link>
+            <router-link to="/services" class="nav-item nav-link">Services</router-link>
+            <router-link to="/booking" class="nav-item nav-link">Booking</router-link>
+         </ul>
         <ul class="float-end navbar-nav me-5 fs-5">
           <li class="nav-item float-end">
             <a class="nav-link" href="https://www.facebook.com/profile.php?id=100084295332797"><i class="fa-brands fa-facebook"></i></a>
@@ -68,9 +50,7 @@
 </template>
 
 <style scoped>
-nav {
-  z-index: 1;
-}
+
 
 .navbar-brand {
   font-family: 'Tangerine', cursive;

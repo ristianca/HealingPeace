@@ -1,9 +1,6 @@
 <script setup>
-import Parallax from '@/components/Parallax.vue';
 import HeroSection from '../components/HeroSection.vue'
-import { ref } from 'vue'
 
-const pageBreak = ref('25vh')
 
 const welcomeSection = {
   background: '#205a5a',
@@ -33,7 +30,6 @@ const woop = {
 <template>
   <main>
     <HeroSection :title="welcomeSection.header" :image="welcomeSection.image" :body="welcomeSection.body" :bg-color="welcomeSection.background" />
-    <Parallax :height="pageBreak" :show-title="false" />
     <HeroSection :title="woop.header" :image="woop.image" :body="woop.body" :img-left="woop.reverse" :bg-color="woop.background" :hero-button="woop.show"/>
   </main>
 </template>
