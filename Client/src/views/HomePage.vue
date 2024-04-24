@@ -1,5 +1,10 @@
 <script setup>
 import HeroSection from '../components/HeroSection.vue'
+import Parallax from '../components/Parallax.vue'
+import { ref } from 'vue'
+
+const pageBreak = ref('25vh')
+const titleHeight = ref('100vh')
 
 
 const welcomeSection = {
@@ -29,7 +34,9 @@ const woop = {
 
 <template>
   <main>
+    <Parallax :height="titleHeight" :show-title="true" />
     <HeroSection :title="welcomeSection.header" :image="welcomeSection.image" :body="welcomeSection.body" :bg-color="welcomeSection.background" />
+    <Parallax :height="pageBreak" :show-title="false" />
     <HeroSection :title="woop.header" :image="woop.image" :body="woop.body" :img-left="woop.reverse" :bg-color="woop.background" :hero-button="woop.show"/>
   </main>
 </template>

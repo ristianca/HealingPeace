@@ -5,7 +5,7 @@
 <template>
   <nav class="navbar navbar-dark navbar-expand-lg bg-transparent">
     <div class="container-fluid">
-      <a class="navbar-brand" href="#">
+      <a class="navbar-brand" href="/">
         <!-- we can put in a logo prop here to make it more component-like -->
         <img
           src="/src/assets/feather-svgrepo-com.svg" 

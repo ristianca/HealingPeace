@@ -4,7 +4,7 @@
 
 
 <template>
-    <body class="container text-center w-100% text-dark">
+    <body class="container text-center w-100% text-dark pad-top">
         <div class="col align-self-start">
         <div class="row w-100% mt-4 mx-auto bg-light">
             <h1 class="pt-4 justify-self-start">Booking Page</h1>
@@ -20,10 +20,7 @@
 </template>
 
 <style>
-body{
-    background-color: #205a5a;
 
-}
  @media (min-width: 1024px) {
   .about {
     min-height: 100vh;
