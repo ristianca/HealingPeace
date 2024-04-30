@@ -24,6 +24,8 @@
         aria-controls="navbarSupportedContent"
         aria-expanded="false"
         aria-label="Toggle navigation"
+        onclick="toggleNavPadding()"
+        id="navbarToggler"
       >
         <span class="navbar-toggler-icon"></span>
       </button>
@@ -33,7 +35,7 @@
             <router-link to="/services" class="nav-item nav-link">Services</router-link>
             <router-link to="/booking" class="nav-item nav-link">Booking</router-link>
          </ul>
-        <ul class="float-end navbar-nav me-5 fs-5">
+        <ul class="float-end navbar-nav me-md-5 fs-5" id="navEnd">
           <li class="nav-item float-end">
             <a class="nav-link" href="https://www.facebook.com/profile.php?id=100084295332797"><i class="fa-brands fa-facebook"></i></a>
           </li>
@@ -50,8 +52,6 @@
 </template>
 
 <style scoped>
-
-
 .navbar-brand {
   font-family: 'Tangerine', cursive;
   font-weight: 700;
@@ -59,3 +59,4 @@
   padding-left: 2rem;
 }
 </style>
+
