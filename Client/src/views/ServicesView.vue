@@ -120,7 +120,7 @@
 
 <style>
 .card {
-  background-color: #434e53af;
+  background-color: #2d3e41c7;
   color: white;
 }
 
