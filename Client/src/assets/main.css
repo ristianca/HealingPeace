@@ -48,6 +48,12 @@ nav {
 
 .pad-top {
   padding-top: 5rem;
+  transition: padding-top 0.33s ease;
+}
+
+.nav-open {
+  padding-top: 13rem;
+  transition: padding-top 0.33s ease;
 }
 
 body {

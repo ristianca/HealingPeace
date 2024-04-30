@@ -24,6 +24,8 @@
         aria-controls="navbarSupportedContent"
         aria-expanded="false"
         aria-label="Toggle navigation"
+        onclick="toggleNavPadding()"
+        id="navbarToggler"
       >
         <span class="navbar-toggler-icon"></span>
       </button>
@@ -50,8 +52,6 @@
 </template>
 
 <style scoped>
-
-
 .navbar-brand {
   font-family: 'Tangerine', cursive;
   font-weight: 700;
@@ -59,3 +59,4 @@
   padding-left: 2rem;
 }
 </style>
+
