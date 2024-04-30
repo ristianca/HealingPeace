@@ -9,7 +9,11 @@ function toggleNavPadding() {
           elements[i].classList.add('nav-open');
         }
       }
-    } else {
+
+      document.getElementById("navEnd").classList.add("navEnd-open");
+
+    } 
+    else {
       var elements = document.getElementsByClassName("nav-open");
 
       for (var i in elements) {
@@ -17,5 +21,7 @@ function toggleNavPadding() {
           elements[i].classList.remove('nav-open');
         }
       }
+
+      document.getElementById("navEnd").classList.remove("navEnd-open");
     }
   }

@@ -51,10 +51,21 @@ nav {
   transition: padding-top 0.33s ease;
 }
 
-.nav-open {
-  padding-top: 13rem;
-  transition: padding-top 0.33s ease;
+@media (max-width: 768px) {
+  .nav-open {
+    padding-top: 13rem;
+    transition: padding-top 0.33s ease;
+  }
+
+  .navEnd-open {
+    flex-direction: row;
+    justify-content: space-evenly;
+    width: 100%;
+    margin-top: -1rem;
+  }
 }
+
+
 
 body {
     background-image: url("https://images.unsplash.com/photo-1493752689441-72be47db3f91");
