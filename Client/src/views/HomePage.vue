@@ -40,3 +40,14 @@ const woop = {
     <HeroSection :title="woop.header" :image="woop.image" :body="woop.body" :img-left="woop.reverse" :bg-color="woop.background" :hero-button="woop.show"/>
   </main>
 </template>
+
+
+<style>
+main {
+    -ms-overflow-style: none;  /* Internet Explorer 10+ */
+    scrollbar-width: none;  /* Firefox */
+}
+html::-webkit-scrollbar { 
+    display: none;  /* Safari and Chrome */
+}
+</style>
