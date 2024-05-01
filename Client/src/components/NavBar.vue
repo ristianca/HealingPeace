@@ -51,7 +51,7 @@
 </template>
 
 <script setup>
-import loginLogout from "./Test_components/login_logout.vue"
+import loginLogout from './Test_components/login_logout.vue'
 </script>
 
 <style scoped>
