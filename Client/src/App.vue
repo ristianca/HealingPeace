@@ -1,21 +1,20 @@
 <script>
-  import {  RouterView } from 'vue-router'
-  import NavBar from './components/NavBar.vue'
-  import Parallax from './components/Parallax.vue'
-  import { ref } from 'vue'
+import { RouterView } from 'vue-router'
+import NavBar from './components/NavBar.vue'
+import Parallax from './components/Parallax.vue'
+import { ref } from 'vue'
 
-  export default {
-    name: 'App',
-    components: {
-      Parallax,
-      NavBar,
-      RouterView
-    },
-    props: {
-      titleHeight: ref('100vh')
-    }
-
+export default {
+  name: 'App',
+  components: {
+    Parallax,
+    NavBar,
+    RouterView
+  },
+  props: {
+    titleHeight: ref('100vh')
   }
+}
 </script>
 
 <template>
@@ -27,8 +26,6 @@
 </template>
 
 <style scoped>
-
-
 header {
   position: absolute;
   top: 0;
@@ -83,5 +80,5 @@ nav a:first-of-type {
 
     padding: 1rem 0;
   }
-} 
+}
 </style>

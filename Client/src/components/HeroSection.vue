@@ -29,25 +29,21 @@ defineProps({
 })
 </script>
 <template>
-  <div class="heroSection" :style="{backgroundColor: bgColor}">
+  <div class="heroSection" :style="{ backgroundColor: bgColor }">
     <div class="heroContainer">
       <div class="row" :class="[imgLeft ? '' : 'text-end']">
-        <img
-          class="hero-img col"
-          :class="[imgLeft ? '' : 'order-5']"
-          :src="image"
-          alt=""
-        />
-        <div class="col flex-grow-1" style="position: relative;">
+        <img class="hero-img col" :class="[imgLeft ? '' : 'order-5']" :src="image" alt="" />
+        <div class="col flex-grow-1" style="position: relative">
           <div class="heroText">
             <h1 class="">{{ title }}</h1>
           </div>
           <!-- {{ body }} eventually replace this v-html with body text once we get around to making the website customizeable -->
-          <div class="heroSubtitle" v-html="body">
-          </div>
+          <div class="heroSubtitle" v-html="body"></div>
           <div class="heroFooter w-100" v-if="heroButton">
             <div class="d-grid gap-2 col-6 mx-auto">
-              <button class="btn btn-outline-success" type="button"><h5 class="my-2">View Our Full List of Services</h5></button>
+              <button class="btn btn-outline-success" type="button">
+                <h5 class="my-2">View Our Full List of Services</h5>
+              </button>
             </div>
           </div>
         </div>
@@ -75,12 +71,12 @@ defineProps({
 
 .heroSubtitle {
   color: white;
-  font-family: "Comfortaa", sans-serif;
+  font-family: 'Comfortaa', sans-serif;
 }
 
 .heroText {
-  color: rgba(0, 255, 255, .65);
-  font-family: "Averia Serif Libre", serif;
+  color: rgba(0, 255, 255, 0.65);
+  font-family: 'Averia Serif Libre', serif;
 }
 
 .heroFooter {
@@ -94,6 +90,6 @@ defineProps({
 }
 
 h5 {
-  font-family: "Averia Serif Libre", serif;
+  font-family: 'Averia Serif Libre', serif;
 }
 </style>
