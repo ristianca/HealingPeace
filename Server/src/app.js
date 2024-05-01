@@ -28,7 +28,7 @@ const checkJwt = auth({
     issuerBaseURL: `https://dev-l8xpvfi4.us.auth0.com/`,
     //issuerBaseURL: `https://dev-l8xpvfi4.us.auth0.com/oauth/token`
 });
-  
+
   // This route doesn't need authentication
   app.get('/api/public', function(req, res) {
     res.json({

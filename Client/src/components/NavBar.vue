@@ -1,7 +1,7 @@
 <template>
   <nav class="navbar navbar-dark navbar-expand-lg bg-transparent">
     <div class="container-fluid">
-      <a class="navbar-brand" href="#">
+      <a class="navbar-brand" href="/">
         <!-- we can put in a logo prop here to make it more component-like -->
         <img
           src="/src/assets/feather-svgrepo-com.svg"
@@ -20,6 +20,8 @@
         aria-controls="navbarSupportedContent"
         aria-expanded="false"
         aria-label="Toggle navigation"
+        onclick="toggleNavPadding()"
+        id="navbarToggler"
       >
         <span class="navbar-toggler-icon"></span>
       </button>
@@ -76,10 +78,6 @@ import loginLogout from './Test_components/login_logout.vue'
 </script>
 
 <style scoped>
-nav {
-  z-index: 1;
-}
-
 .navbar-brand {
   font-family: 'Tangerine', cursive;
   font-weight: 700;
@@ -87,3 +85,4 @@ nav {
   padding-left: 2rem;
 }
 </style>
+

@@ -3,34 +3,40 @@ import { RouterView } from 'vue-router'
 import NavBar from './components/NavBar.vue'
 import Parallax from './components/Parallax.vue'
 import { ref } from 'vue'
+  import { RouterView } from 'vue-router'
+  import NavBar from './components/NavBar.vue'
+  import { ref } from 'vue'
 
-export default {
-  name: 'App',
-  components: {
-    Parallax,
-    NavBar,
-    RouterView
-  },
-  props: {
-    titleHeight: ref('100vh')
+  export default {
+    name: 'App',
+    components: {
+      NavBar,
+      RouterView
+    },
+    props: {
+      titleHeight: ref('100vh')
+    }
+
   }
-}
+
+
 </script>
 
 <template>
-  <Parallax :height="titleHeight" />
   <header>
     <NavBar />
   </header>
-  <RouterView />
+    <RouterView />
 </template>
 
 <style scoped>
-header {
-  position: absolute;
+
+
+.header {
+  position: fixed;
   top: 0;
   width: 100%;
-  background-color: rgba(55, 75, 75, 0.5);
+  background-color: rgba(17, 163, 163, 0.47);
 }
 
 .logo {
@@ -80,5 +86,7 @@ nav a:first-of-type {
 
     padding: 1rem 0;
   }
-}
+
+  
+} 
 </style>
