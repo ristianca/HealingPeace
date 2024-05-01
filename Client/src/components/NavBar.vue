@@ -27,10 +27,9 @@
         <ul class="navbar-nav me-auto mb-2 mb-lg-0">
           <li class="nav-item">
             <RouterLink class="nav-link" to="/homepage">Home</RouterLink>
-
           </li>
           <li class="nav-item">
-              <RouterLink class ="nav-link" to="/about">About</RouterLink>
+            <RouterLink class="nav-link" to="/about">About</RouterLink>
           </li>
           <li class="nav-item">
             <a class="nav-link">Login</a>
@@ -73,7 +72,7 @@
 </template>
 
 <script setup>
-import loginLogout from "./Test_components/login_logout.vue"
+import loginLogout from './Test_components/login_logout.vue'
 </script>
 
 <style scoped>
