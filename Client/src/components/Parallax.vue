@@ -42,6 +42,7 @@ defineProps({
     align-content: space-evenly;
     margin: auto;
     font-family: 'Tangerine', cursive;
+    text-shadow: rgb(0, 48, 49) 1px 0 10px;
 }
 
 .titleStyle {
