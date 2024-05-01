@@ -5,6 +5,7 @@
         <!-- we can put in a logo prop here to make it more component-like -->
         <img
           src="/src/assets/feather-svgrepo-com.svg"
+          src="/src/assets/feather-svgrepo-com.svg"
           alt="Logo"
           width="30"
           height="24"
@@ -59,10 +60,14 @@
             <a class="nav-link" href="https://www.facebook.com/profile.php?id=100084295332797"
               ><i class="fa-brands fa-facebook"></i
             ></a>
+            <a class="nav-link" href="https://www.facebook.com/profile.php?id=100084295332797"
+              ><i class="fa-brands fa-facebook"></i
+            ></a>
           </li>
           <li class="nav-item float-end">
             <a class="nav-link" href="#"><i class="fa-brands fa-instagram"></i></a>
           </li>
+          <li class="nav-item float-end" style="font-size: 1rem; align-self: center">
           <li class="nav-item float-end" style="font-size: 1rem; align-self: center">
             <a class="nav-link" href="#">Contact Us</a>
           </li>
@@ -71,10 +76,11 @@
     </div>
   </nav>
   <loginLogout></loginLogout>
+  <loginLogout></loginLogout>
 </template>
 
 <script setup>
-import loginLogout from './Test_components/login_logout.vue'
+import loginLogout from "./Test_components/login_logout.vue"
 </script>
 
 <style scoped>
