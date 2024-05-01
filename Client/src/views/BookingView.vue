@@ -23,9 +23,8 @@ const listUpcomingEvents = async () => {
       'maxResults': 10,
       'orderBy': 'startTime',
     };
-    
+
     const response = await gapi.client.calendar.events.list(request);
-    console.log('Response:', response);
     const events = response.result.items;
     
     if (!events || events.length === 0) {
