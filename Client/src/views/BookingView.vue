@@ -1,5 +1,5 @@
 <template>
-  <body>
+  <body class="container text-center text-dark pad-top">
     <div class="h-100vh w-100vw mx-auto">
       <h1>Upcoming events:</h1>
       <pre id="content"></pre>

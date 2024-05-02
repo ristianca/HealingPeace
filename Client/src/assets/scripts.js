@@ -1,6 +1,4 @@
 function toggleNavPadding() {
-  console.log("click");
-
     if (!document.getElementById("navbarToggler").classList.contains("collapsed")) {
       var elements = document.getElementsByClassName("pad-top");
 
@@ -25,3 +23,9 @@ function toggleNavPadding() {
       document.getElementById("navEnd").classList.remove("navEnd-open");
     }
   }
+
+function hideNav() {
+  if (window.matchMedia("(max-width: 768px)").matches) {
+    document.getElementById("navbarToggler").click();
+  }
+}
