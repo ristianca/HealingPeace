@@ -12,12 +12,7 @@ const router = createRouter({
     {
       path: '/services',
       name: 'services',
-      component: () => import('../views/ServicesView.vue')
-    },
-    {
-      path: '/register',
-      name: 'register',
-      component: () => import('../views/RegisterView.vue'),
+      component: () => import('../views/ServicesView.vue'),
       beforeEnter: authGuard
     }
   ]
