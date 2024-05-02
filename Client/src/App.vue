@@ -1,29 +1,42 @@
-<script setup>
-import { RouterLink, RouterView } from 'vue-router'
-import HelloWorld from './components/HelloWorld.vue'
+<script>
+import { RouterView } from 'vue-router'
+import NavBar from './components/NavBar.vue'
+import Parallax from './components/Parallax.vue'
+import { ref } from 'vue'
+  import { RouterView } from 'vue-router'
+  import NavBar from './components/NavBar.vue'
+  import { ref } from 'vue'
+
+  export default {
+    name: 'App',
+    components: {
+      NavBar,
+      RouterView
+    },
+    props: {
+      titleHeight: ref('100vh')
+    }
+
+  }
+
+
 </script>
 
 <template>
   <header>
-    <img alt="Vue logo" class="logo" src="@/assets/logo.svg" width="125" height="125" />
-
-    <div class="wrapper">
-      <HelloWorld msg="You did it!" />
-
-      <nav>
-        <RouterLink to="/">Home</RouterLink>
-        <RouterLink to="/about">About</RouterLink>
-      </nav>
-    </div>
+    <NavBar />
   </header>
-
-  <RouterView />
+    <RouterView />
 </template>
 
 <style scoped>
-header {
-  line-height: 1.5;
-  max-height: 100vh;
+
+
+.header {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background-color: rgba(17, 163, 163, 0.47);
 }
 
 .logo {
@@ -35,7 +48,6 @@ nav {
   width: 100%;
   font-size: 12px;
   text-align: center;
-  margin-top: 2rem;
 }
 
 nav a.router-link-exact-active {
@@ -57,12 +69,6 @@ nav a:first-of-type {
 }
 
 @media (min-width: 1024px) {
-  header {
-    display: flex;
-    place-items: center;
-    padding-right: calc(var(--section-gap) / 2);
-  }
-
   .logo {
     margin: 0 2rem 0 0;
   }
@@ -79,7 +85,8 @@ nav a:first-of-type {
     font-size: 1rem;
 
     padding: 1rem 0;
-    margin-top: 1rem;
   }
-}
+
+  
+} 
 </style>
