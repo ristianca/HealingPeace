@@ -2,9 +2,9 @@ function toggleNavPadding() {
   console.log("click");
 
     if (!document.getElementById("navbarToggler").classList.contains("collapsed")) {
-      var elements = document.getElementsByClassName("pad-top");
+      let elements = document.getElementsByClassName("pad-top");
 
-      for (var i in elements) {
+      for (let i in elements) {
         if (elements.hasOwnProperty(i)) {
           elements[i].classList.add('nav-open');
         }
@@ -14,9 +14,9 @@ function toggleNavPadding() {
 
     } 
     else {
-      var elements = document.getElementsByClassName("nav-open");
+      let elements = document.getElementsByClassName("nav-open");
 
-      for (var i in elements) {
+      for (let i in elements) {
         if (elements.hasOwnProperty(i)) {
           elements[i].classList.remove('nav-open');
         }
@@ -25,3 +25,4 @@ function toggleNavPadding() {
       document.getElementById("navEnd").classList.remove("navEnd-open");
     }
   }
+export default toggleNavPadding
