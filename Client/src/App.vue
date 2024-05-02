@@ -1,4 +1,8 @@
 <script>
+import { RouterView } from 'vue-router'
+import NavBar from './components/NavBar.vue'
+import Parallax from './components/Parallax.vue'
+import { ref } from 'vue'
   import { RouterView } from 'vue-router'
   import NavBar from './components/NavBar.vue'
   import { ref } from 'vue'

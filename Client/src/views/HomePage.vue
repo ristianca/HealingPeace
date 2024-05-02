@@ -1,3 +1,23 @@
+<template>
+  <main>
+    <HeroSection
+      :title="welcomeSection.header"
+      :image="welcomeSection.image"
+      :body="welcomeSection.body"
+      :bg-color="welcomeSection.background"
+    />
+    <Parallax :height="pageBreak" :show-title="false" />
+    <HeroSection
+      :title="woop.header"
+      :image="woop.image"
+      :body="woop.body"
+      :img-left="woop.reverse"
+      :bg-color="woop.background"
+      :hero-button="woop.show"
+    />
+  </main>
+</template>
+
 <script setup>
 import HeroSection from '../components/HeroSection.vue'
 import Parallax from '../components/Parallax.vue'
@@ -9,8 +29,8 @@ const titleHeight = ref('100vh')
 
 const welcomeSection = {
   background: '#205a5a',
-  header: "We Welcome You...",
-  image: "https://images.unsplash.com/photo-1519823551278-64ac92734fb1",
+  header: 'We Welcome You...',
+  image: 'https://images.unsplash.com/photo-1519823551278-64ac92734fb1',
   body: `<p>
               Your sanctuary of serenity awaits. We are delighted to introduce you to a world where
               relaxation, rejuvenation, and inner peace merge seamlessly. Our passionate team of
@@ -23,13 +43,12 @@ const welcomeSection = {
 }
 const woop = {
   background: '#1c3531',
-  header: "Services",
-  image: "../src/assets/collage-pic.png",
+  header: 'Services',
+  image: '../src/assets/collage-pic.png',
   body: `<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>`,
   reverse: false,
   show: true
-};
-
+}
 </script>
 
 <template>
