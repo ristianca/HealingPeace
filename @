@@ -1,0 +1,230 @@
+[33mcommit 6714700afe4ff0a3033c6cf02a495d8a009295a8[m[33m ([m[1;36mHEAD[m[33m, [m[1;31mHealingPeace/Dillons_Branch[m[33m)[m
+Author: Dillon Greek <techhead404@gmail.com>
+Date:   Tue Apr 30 21:26:29 2024 -0500
+
+    Add Google Calendar integration to BookingView.vue
+
+[33mcommit b13eb66f8c5ba286794a76dcf959858ce70e6737[m
+Merge: 34d96a0 3d80a09
+Author: Dillon Greek <techhead404@gmail.com>
+Date:   Tue Apr 30 21:24:37 2024 -0500
+
+    Merge branch 'Develop' into Dillons_Branch
+
+[33mcommit 3d80a096d1e217ea801c6d6c582163d52de63c8a[m
+Author: Dillon Greek <techhead404@gmail.com>
+Date:   Tue Apr 30 21:18:56 2024 -0500
+
+    Add .gitignore file and update index.html and BookingView.vue
+
+[33mcommit 34d96a028a9e7d20538af30e6f7f6d8b7bee641e[m
+Author: Dillon Greek <techhead404@gmail.com>
+Date:   Tue Apr 30 20:28:46 2024 -0500
+
+    added .env and google json token to ignore
+
+[33mcommit fc019902f41763e21b94da26934eec5ca18166db[m
+Author: Dillon Greek <techhead404@gmail.com>
+Date:   Tue Apr 30 20:27:46 2024 -0500
+
+    Co-authored-by: Cristiano Hernandez <ristianca@users.noreply.github.com>
+
+[33mcommit 43ad6de85a682474d1f4daf0e487092e4a643412[m
+Merge: f3ce324 34287e1
+Author: Cristiano Hernandez <116103708+ristianca@users.noreply.github.com>
+Date:   Tue Apr 30 13:27:41 2024 -0500
+
+    Merge pull request #9 from ristianca/ivy-develop
+    
+    Ivy to Develop
+
+[33mcommit 34287e1897112798efa9f863ded9dc684da1f3c6[m[33m ([m[1;31mHealingPeace/ivy-develop[m[33m)[m
+Author: Elasia H <elasia.hamilton@outlook.com>
+Date:   Mon Apr 29 20:40:41 2024 -0500
+
+    fixed contact us end of navbar for mobile displays
+
+[33mcommit b17f75b6ed006a30db8b429e5ec1c889e140ba64[m
+Author: Elasia H <elasia.hamilton@outlook.com>
+Date:   Mon Apr 29 20:30:00 2024 -0500
+
+    fix navbar on mobile
+
+[33mcommit 1ccefa20bcaf7da298d32b63ad9b4972d37282a0[m
+Author: Elasia H <elasia.hamilton@outlook.com>
+Date:   Mon Apr 29 19:44:36 2024 -0500
+
+    increase card background legibility
+
+[33mcommit d9f87cb3aa7702649784986fb029c20b0d9145f4[m
+Author: Elasia H <elasia.hamilton@outlook.com>
+Date:   Mon Apr 29 19:41:56 2024 -0500
+
+    services page styles, hid scrollbar on homepage for aesthetics
+
+[33mcommit f3ce324ad9a30764774478c6e0e34a1da4001b33[m
+Merge: 76b4f8d 0821d27
+Author: Cristiano Hernandez <116103708+ristianca@users.noreply.github.com>
+Date:   Wed Apr 24 18:13:37 2024 -0500
+
+    Merge pull request #8 from ristianca/ivy-develop
+    
+    add example of calendar embed
+
+[33mcommit 0821d27e53b1143f3c8d6847451d5596ab166a30[m
+Author: Elasia H <elasia.hamilton@outlook.com>
+Date:   Wed Apr 24 18:03:10 2024 -0500
+
+    add example of calendar embed
+
+[33mcommit 76b4f8db9dd2023b37c8c253c608086aa9bc9521[m
+Author: Elasia H <elasia.hamilton@outlook.com>
+Date:   Wed Apr 24 16:46:00 2024 -0500
+
+    restore parallax component and fix implementation to avoid interference with non-homepage layouts
+
+[33mcommit 521f0a230b3519a7f953cf023db5e324593b27a3[m
+Author: Dillon Greek <techhead404@gmail.com>
+Date:   Wed Apr 17 18:32:54 2024 -0500
+
+    Nav and page changes
+
+[33mcommit 9ee0660a269a4645879fe6096e368c04852da53b[m[33m ([m[1;31morigin/Dillons_Branch[m[33m)[m
+Author: Dillon Greek <techhead404@gmail.com>
+Date:   Fri Apr 5 19:09:10 2024 -0500
+
+    Testing personal branch
+
+[33mcommit f67c0a6b42060f73363b5215d6fdb739a29e9e8b[m[33m ([m[1;31morigin/Develop[m[33m)[m
+Author: Dillon Greek <techhead404@gmail.com>
+Date:   Fri Apr 5 19:04:37 2024 -0500
+
+    Auth Server Side
+
+[33mcommit 512a53de40cbbdbe4ca3580c1d59a6109bff4bdd[m
+Merge: c94a580 09f8e13
+Author: Dillon Greek <techhead404@gmail.com>
+Date:   Thu Apr 4 18:09:29 2024 -0500
+
+    Merge branch 'Develop' of https://github.com/ristianca/HealingPeace into Develop
+
+[33mcommit c94a58097954fcd96915076f9cd2fb7719a2e837[m
+Author: Dillon Greek <techhead404@gmail.com>
+Date:   Thu Apr 4 18:09:21 2024 -0500
+
+    admin
+
+[33mcommit 09f8e13a54ead96edaabf8b923a44b9c058bb865[m
+Author: Elasia H <elasia.hamilton@outlook.com>
+Date:   Thu Apr 4 15:38:53 2024 -0500
+
+    homepage layout
+
+[33mcommit 29424b3cb1556d462e99508091ae1ca830746e14[m
+Author: Dillon Greek <techhead404@gmail.com>
+Date:   Thu Apr 4 09:19:53 2024 -0500
+
+    Started Auth0
+
+[33mcommit 71765f565dc27afab041d4a18cf03ed6a2346a95[m
+Author: Dillon Greek <techhead404@gmail.com>
+Date:   Thu Apr 4 09:19:30 2024 -0500
+
+    Set up the Routes
+
+[33mcommit e891aef12b470f40eefa8f59f7786e1035081d36[m
+Author: Dillon Greek <techhead404@gmail.com>
+Date:   Mon Apr 1 16:12:55 2024 -0500
+
+    Syncing laptop repo
+
+[33mcommit 80a6c439121e678263f2942510aab15e72b88ed9[m
+Merge: 2ba405d c7305f4
+Author: Dillon Greek <techhead404@gmail.com>
+Date:   Fri Mar 29 09:32:34 2024 -0500
+
+    Update HTML, CSS, and package versions
+
+[33mcommit 2ba405d434d11f6a096e9b2c65b8c20754542762[m
+Author: Dillon Greek <techhead404@gmail.com>
+Date:   Fri Mar 29 09:27:35 2024 -0500
+
+    api is working db connection is broken
+
+[33mcommit c7305f4977bd9279815b66150d5ecaf747627fc8[m
+Author: Elasia H <elasia.hamilton@outlook.com>
+Date:   Thu Mar 28 18:46:30 2024 -0500
+
+    basic homepage layout, added bootstrap
+
+[33mcommit 7f22ce6e7e55078df73ae9cc1dd61ce1f5d79cfb[m
+Author: Dillon Greek <techhead404@gmail.com>
+Date:   Wed Mar 27 18:07:48 2024 -0500
+
+    registerLogin
+
+[33mcommit e77d349aa9480e7fd727b597fc5074d0cdc4e88f[m
+Author: Dillon Greek <techhead404@gmail.com>
+Date:   Wed Mar 27 17:52:25 2024 -0500
+
+    syncing projects
+
+[33mcommit e42dd9dbb77fffe6baaa698e82c51a292be385f8[m
+Author: Dillon Greek <techhead404@gmail.com>
+Date:   Sat Mar 23 20:27:46 2024 -0500
+
+    Redone most of what I lost. Still need to hash passwords and changed user table to login table
+
+[33mcommit c299231dac20a078a812c62d71750d6d3519a134[m
+Author: Dillon Greek <techhead404@gmail.com>
+Date:   Sat Mar 23 20:14:32 2024 -0500
+
+    Added env to ignore list
+
+[33mcommit 1817d9ae3910c74b64469878a3b7efc3fc3c37c8[m
+Author: Dillon Greek <techhead404@gmail.com>
+Date:   Sat Mar 23 20:13:22 2024 -0500
+
+    Lost some work setting up git.
+
+[33mcommit 815ed732de5e1bdce2a8d7d7c28735d4012ef225[m
+Author: ristianca <chmyeducationemail@gmail.com>
+Date:   Tue Mar 19 08:02:41 2024 -0500
+
+    Rule test
+
+[33mcommit fe572d060da770b743adb684d030b73507597393[m
+Author: ristianca <chmyeducationemail@gmail.com>
+Date:   Tue Mar 19 07:57:18 2024 -0500
+
+    develop test commit
+
+[33mcommit 364a070e0ba28b6df4564e4cd244c904ae38efc8[m
+Author: ristianca <chmyeducationemail@gmail.com>
+Date:   Tue Mar 19 07:04:25 2024 -0500
+
+    Test
+
+[33mcommit 4f4096642dce4b18118b809b790c8c319911b11c[m
+Author: Dillon Greek <techhead404@gmail.com>
+Date:   Sat Mar 2 22:37:09 2024 -0600
+
+    Api and Client Connected
+
+[33mcommit 152d0d4eeec1043b8d4e2657df0559c6acda658e[m
+Author: Dillon Greek <techhead404@gmail.com>
+Date:   Sat Mar 2 18:07:13 2024 -0600
+
+    transfer
+
+[33mcommit 906d69ee68ae70893b86aa89d08b4420fbb8c597[m
+Author: Dillon Greek <techhead404@gmail.com>
+Date:   Thu Feb 29 10:40:12 2024 -0600
+
+    Initial Commit
+
+[33mcommit fdfedacc49f2923cea8f1ac2d2ea062c44f9046b[m
+Author: Dillon Greek <techhead404@gmail.com>
+Date:   Thu Feb 29 09:16:13 2024 -0600
+
+    first commit

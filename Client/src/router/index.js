@@ -22,13 +22,14 @@ const router = createRouter({
     {
       path: '/booking',
       name: 'booking',
-      component: () => import('../views/BookingView.vue')
+      component: () => import('../views/BookingView.vue'),
+      beforeEnter: authGuard
     },
     {
       path: '/register',
       name: 'register',
       component: () => import('../views/RegisterView.vue'),
-      beforeEnter: authGuard
+      
     }
   ]
 });
