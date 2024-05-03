@@ -45,11 +45,11 @@
             <a class="nav-link" href="#"><i class="fa-brands fa-instagram"></i></a>
           </li>
           <li class="nav-item float-end" style="font-size: 1rem; align-self: center">
-            <a v-if="user === true" class="nav-link" @click="logoutWithRedirect">
+            <a v-if="userState === true" class="nav-link" @click="logoutWithRedirect">
               <i class="h2 fa-solid fa-circle-user m-0"></i>
               <p class="mb-0" style="font-size: 75%; margin-top: -0.5rem">Log Out</p>
             </a>
-            <a v-else class="nav-link" @click="login">
+            <a v-else-if="userState === false" class="nav-link" @click="login">
               <i class="h2 fa-solid fa-circle-user m-0"></i>
               <p class="mb-0" style="font-size: 75%; margin-top: -0.5rem">Log In</p>
             </a>
@@ -62,29 +62,31 @@
 
 <script setup>
 import { useAuth0 } from '@auth0/auth0-vue'
+import { useStore } from '../stores/UserStore'
 
-import {  ref } from 'vue'
-
+const store = useStore()
 const { loginWithRedirect } = useAuth0()
 const { logout } = useAuth0()
 
-const user = ref(false)
+const userState = store.loggedIn
 
 function login() {
   loginWithRedirect()
-  user.value = true
+  store.$patch({
+    loggedIn: true
+  })
 }
 
 function logoutWithRedirect() {
+  store.$patch({
+    loggedIn: false
+  })
   logout({
     logoutParams: {
       returnTo: window.location.origin
     }
   })
-  user.value = false
-
 }
-
 </script>
 
 <style scoped>
