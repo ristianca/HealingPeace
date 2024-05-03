@@ -10,9 +10,24 @@ const router = createRouter({
       component: () => import('../views/HomePage.vue')
     },
     {
+      path: '/homepage',
+      name: 'home page',
+      component: () => import('../views/HomePage.vue')
+    },
+    {
       path: '/services',
       name: 'services',
-      component: () => import('../views/ServicesView.vue'),
+      component: () => import('../views/ServicesView.vue')
+    },
+    {
+      path: '/booking',
+      name: 'booking',
+      component: () => import('../views/BookingView.vue')
+    },
+    {
+      path: '/register',
+      name: 'register',
+      component: () => import('../views/RegisterView.vue'),
       beforeEnter: authGuard
     }
   ]
